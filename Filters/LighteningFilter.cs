@@ -21,15 +21,11 @@ namespace MyPhotoshop
 		
 		public Photo Process(Photo original, double[] parameters)
 		{
-			var result=new Photo();
-			result.width=original.width;
-			result.height=original.height;
-			result.data=new Data.Pixel[result.width, result.height];
+			var result=new Photo(original.width, original.height);						
 			
 			for (int x=0;x<result.width;x++)
 				for (int y=0;y<result.height;y++)
-                {
-                    result.data[x, y] = new Data.Pixel();
+                {                    
                     for (int z = 0; z < 3; z++)
                     {
                         var temp = result.data[x, y][z];

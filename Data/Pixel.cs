@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyPhotoshop.Data
 {
-    public class Pixel
+    public struct Pixel
     {
         const double ZERO = 0;
         const double ONE = 1;
@@ -49,7 +49,7 @@ namespace MyPhotoshop.Data
 
         public static double Trim(double value)
         {
-            if (value > ZERO)
+            if (value > ONE)
                 return ONE;
             if (value < ZERO)
                 return ZERO;
