@@ -1,0 +1,8 @@
+bin
+obj
+*.suo
+TestResults/
+/.vs/Photoshop/v15/Server/sqlite3/db.lock
+/.vs/Photoshop/v15/Server/sqlite3/storage.ide-wal
+/.vs/Photoshop/v15/Server/sqlite3/storage.ide-shm
+/.vs/Photoshop/v15/Server/sqlite3/storage.ide
