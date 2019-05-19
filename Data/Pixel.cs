@@ -40,6 +40,13 @@ namespace MyPhotoshop.Data
             }
         }
 
+        public Pixel(double r, double g, double b)
+        {
+            _r = r;
+            _g = g;
+            _b = b;
+        }
+
         public double CheckValue(double val)
         {
             if (val < ZERO || val > ONE)
@@ -90,5 +97,15 @@ namespace MyPhotoshop.Data
             }
         }
 
+        public static Pixel operator* (Pixel p, double c)
+        {
+            p.R *= c;
+            p.G *= c;
+            p.B *= c;
+            Trim(p.R);
+            Trim(p.G);
+            Trim(p.B);
+            return p;
+        }
     }
 }
