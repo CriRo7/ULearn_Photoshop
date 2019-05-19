@@ -7,6 +7,9 @@ namespace MyPhotoshop.Data
 {
     public class Pixel
     {
+        const double ZERO = 0;
+        const double ONE = 1;
+
         private double _r;
         public double R
         {
@@ -39,9 +42,18 @@ namespace MyPhotoshop.Data
 
         public double CheckValue(double val)
         {
-            if (val < 0 || val > 1)
+            if (val < ZERO || val > ONE)
                 throw new ArgumentException();
             return val;
+        }
+
+        public static double Trim(double value)
+        {
+            if (value > ZERO)
+                return ONE;
+            if (value < ZERO)
+                return ZERO;
+            return value;
         }
 
         public double this[int index] {

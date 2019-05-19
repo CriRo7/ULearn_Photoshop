@@ -1,3 +1,4 @@
+using MyPhotoshop.Data;
 using System;
 
 namespace MyPhotoshop
@@ -32,12 +33,14 @@ namespace MyPhotoshop
                     for (int z = 0; z < 3; z++)
                     {
                         var temp = result.data[x, y][z];
-                        result.data[x, y][z] = original.data[x, y][z] * parameters[0];
+                        result.data[x, y][z] = Pixel.Trim(original.data[x, y][z] * parameters[0]);
                     }
                 }
 					
             return result;
 		}
+
+        
 	}
 }
 
